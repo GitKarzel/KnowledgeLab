@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article {
+            font-family: Verdana;
+            font-style: italic;
+            color: red;
+        }
+        h1.heading { color: green;}
+    </style>
+</head>
+<body>
+    <!--
+        Niektóre style mogą być w dziedziczone jeżeli dzieci elementu nie mają wartości kaskadowej, w takim wypadku wartości otrzymują 
+        po rodzicu
+
+        Doyczy to ograniczonej ilości właściwości CSS, głównie zwiazanych z:
+            - czcionkami
+            - właściwościami list
+            - właściwościami obramowania tabel
+            - ułożenia tekstu w elemencie
+            - inne pomniejsze style
+    -->
+
+    <article>
+        <h1 class="heading">Nagłówek <span>Artykułu</span></h1> 
+        <p>Lorem ipsum dolor sit amet.</p>
+    </article>
+    <aside>
+        <h1>Nagłówek</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </aside>
+</body>
+</html>

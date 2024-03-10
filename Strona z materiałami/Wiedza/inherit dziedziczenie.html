@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {color: blue;}
+        header { color: green;}
+        
+        /* kolor linka ma wymuszone dziedziczenie */
+        header a {color: inherit;}
+
+        /* domyślny kolor dla linków czyli czarny */
+        header a {color: initial;}
+    </style>
+</head>
+<body>
+    
+    <!--
+        Słowo kluczowe inherit wymusza dziedziczenie wartości właściwości. Przydatne, gdy kaskada przesłania 
+        dziedziczenie. Linki są niebieskie ze względu na kaskadę
+    -->
+    <header>
+        <h2>Witamy na stronie</h2>
+            <ul>
+                <li><a href="#">Strona główna</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+    </header>
+    <article><a href="#">niebieski link</a></article>
+</body>
+</html>

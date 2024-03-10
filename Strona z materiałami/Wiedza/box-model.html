@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { background: black; color:aliceblue}
+
+        div {
+            text-align: justify;
+        }
+
+        .multi-column2 {
+            column-count: 2;
+        }
+    </style>
+</head>
+<body>
+    <h3>Box Model</h3>
+
+    <div>
+        Wszystkie elementy html są pudełkami (z ang. box) i posiadają
+            <ul>
+                <li>Szerokośc - width </li>
+                <li>Wysokość - height </li>
+            </ul>
+    </div>
+ <img src="szerokość — kopia.jpg">
+
+    <h3>Elementy blokowe vs liniowe</h3>
+    
+    <div class="elementy"> 
+        <p>Każdy element ma wysokość oraz szerokość, ale są zasadnicze różnice między elementami blokowymi oraz linowymi</p>
+        <ul>
+            <li>
+                Elementy blokowe
+                <ul>
+                    <li>- są elemetami prostokątnymi</li>
+                    <li>- mogą mieć ustawioną szerokość wysokość, margines i dopełnienie</li>
+                    <li> - nie łamią się jak tekst do nowej lini</li>
+                </ul>
+            </li>
+            <li >
+                Elementy liniowe 
+                <ul>
+                    <li>- płyną z tekstem wraz z innymi elemenatmi liniowymi</li>
+                    <li>- nie mogą mieć ustawionej szerokości oraz długości, marginesów i dopełnienia</li>
+                    <li>- łamią się z końcem linii</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <h3>Box Model</h3>
+
+    <p>Każdy element blokowy jest pudełkiem (box) mającym następujące właściwości:</p>
+        <p><span style="color:blue;">- content area</span> - treść elementu czyli np tekst, obrazki itd wewnątrz elementu html</p>
+        <p><span style="color: green;"> - padding </span>- dopełnienie, wolna przestrzeń między treścią, a obramowaniem</p>
+        <p><span style="color:yellow;">- border</span> -obramowanie elementu</p>
+        <p><span style="color: red;">- margin </span>- margines - przestrzeń poza elementem html oddzielająca go od innych elementów </p>
+    
+    <!--
+        <style>
+            div {
+                width: 140px;
+                height: 60px;
+                padding: 20px;
+                margin: 30px;
+                border: 15px solid #FFD700
+            }
+        </style>
+    -->
+
+    <img src="magin.jpg">
+
+<h3> Po co nam model pudelkowy? </h3>
+    <div class="pudelek">
+        <p>Poznawala na budowanie układu - layoutu strony z klocków z uzględnieniem: </p>
+        <ul>
+            <li> wymiarów każdego z elementów blokowego </li>
+            <li> marginesów czyli odstępow między elementami</li>
+            <li> padding tworzy wewnętrzne dopełnienie między obramowaniem, a treścią </li>
+            <li> określa pozycję na stronie</li>
+        </ul>
+        <p>Wszystkie te właściwości muszą być przewidywalne i muszą działać na wszystkich przeglądarkach</p>
+
+        <img src="Zrzut ekranu 2023-09-14 134358.jpg" >
+    </div>
+
+
+
+    <!--
+        Domyślne wartości elementów blokowych
+        Elementy blokowe mają width na 100% dzięki czemu wypełniają calą dostępną linie, height auto pozwala na dostosowywanie
+        się wysokości elementu do ilości treści
+    -->
+
+
+
+
+
+
+
+</body>
+</html>

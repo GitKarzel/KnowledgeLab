@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        Pseudoelementy służą do stylowania specyficznych części elemenetówidth: 
+        ::first-letter - pierwsza litera
+        ::first-line - pierwsza linia
+        ::selection - zaznaczony tekst przez użytkownika
+        */
+        p::before {
+            content: "BEFORE ";
+            border: 2px solid green;
+        }
+
+        p::after {
+            content: "AFTER";
+            border: 2px dotted purple;
+        }
+
+        ul {list-style-type: none;}
+
+        li::before {
+            content: "✅";
+        }
+        li:nth-child(2)::after {
+            content: "♥♥♥♥ esia";
+            font-weight: bold;
+        }
+        p::first-letter {font-weight: bold; font-size: 20px;}
+        article::first-line {color: green;}
+        div::selection {background: red;}
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, quia?</p>
+    <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, nostrum numquam!</article>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio maiores illum laborum eos eligendi, voluptate ducimus dolorum quo quod eveniet soluta architecto quibusdam autem, voluptatum aut laudantium dicta libero illo a, necessitatibus numquam! Cum dignissimos expedita nisi modi similique sapiente, quaerat dolores maiores minus voluptatum, adipisci hic et, deserunt aliquid dolore veniam iure eveniet voluptatem quam ratione laudantium amet minima dolorem debitis. Dolore provident minus magni reiciendis maiores, quisquam maxime eligendi voluptatem facere exercitationem repudiandae totam veritatis. Quas impedit illo ducimus veritatis alias vero, cupiditate, nisi culpa aut amet, quaerat saepe eligendi obcaecati. Nostrum officia voluptatibus culpa provident, soluta dolor?</div>
+
+    <!-- Pseudoelementy
+        ::before - dodaje treść przed elementem
+        ::after - dodaje treść za elementem    
+        !!! Unicode-table.com !!!
+    -->
+    <ul>
+        <li>lorem 1</li>
+        <li>lorem 2</li>
+        <li>lorem 3</li>
+    </ul>
+
+</body>
+</html>

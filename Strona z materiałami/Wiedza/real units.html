@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {font-size: 16px;}
+        .cm {font-size: 1cm;}
+        .mm {font-size: 7mm;}
+        .in {font-size: 0.6in;} /* 96px = 2,54cm */
+        .pt {font-size: 10pt;} /* point = 1/72 in */
+        .pc {font-size: 5pc;} /* 1pc (pika) = 12pt */
+
+        article#units p {
+            font-size: 1.2em; /* 16 px * 1.2 = 19.2px */
+        }
+
+        p span {
+            font-size: 1.25em;
+            font-style: italic;
+            color: blue;
+            /* 19,2px * 1.2 = 24px */
+        }
+        ul {font-size: 0.8em;}
+        ul ul {font-size: 1em;}
+    </style>
+</head>
+<body>
+    <article>
+        <p class="cm">1 cm Lorem, ipsum.</p>
+        <p class="mm">7 mm Lorem, ipsum.</p>
+        <p class="in">0,6in Lorem, ipsum.</p>
+        <p class="pt">10 pt Lorem, ipsum.</p>
+        <p class="pc">5 pc Lorem, ipsum.</p>
+    </article>
+
+    <!-- 
+        Jednostki względne jak em określają wielkość względem innego elementu, w przeglądarce to będzie domyślna
+        wielkość czcionki np 16px, kótra jest dziedziczona po body
+    -->
+
+    <article id="units">
+        <h1>Nagłówek</h1>
+            <p><span>Autor: Łukasz</span></p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+    </article>
+    <ul>
+        <li>Poziom 1
+            <ul>
+                <li>Poziom 2
+                    <ul>
+                        <li>Poziom3</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

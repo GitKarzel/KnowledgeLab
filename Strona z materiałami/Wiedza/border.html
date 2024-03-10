@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            padding: 5px;
+            margin: 10px;
+            border-color: black;
+            border-style: solid;
+        }
+        div {
+            width: 100%;
+            height: auto;
+            padding: 20px;
+            margin: 30px;
+            border: 15px solid lightblue;
+        }
+        .dotted { border-style: dotted; }
+        .dashed { border-style: dashed; }
+        .double { border-style: double; }
+        .groove { border-style: groove; }
+        .inset { border-style: inset; }
+        .outset { border-style: outset; }
+        .ridge { border-style: ridge; }
+
+        .mix {
+            padding: 5px;
+            margin: 10px;
+            border-color: black;
+            border-width: 5px;
+            border-style: dotted solid double groove;
+        }
+        .thin {border-width: thin;}
+        .medium {border-width: medium;}
+        .thick {border-width: thick;}
+        .mixed {border-width: thin thick medium 10px;}
+    </style>
+
+
+</head>
+<body>
+    <h3>Border</h3>
+
+    <p>Obramowanie w CSS to przestrzeń między dopełnieniem elementu, a marginesem. Border w przeciwieństwie do margin oraz padding
+        może byc w pełni stylowany np kolorem, rodzajem linii itd.
+    </p>
+
+<div>Lorem ipsum dolor sit amet.</div>
+
+<h3>Border-style</h3>
+    <p>określa styl Obramowania</p>
+<div>solid</div>
+<div class="dotted">dotted</div>
+<div class="dashed">dashed</div>
+<div class="double">double</div>
+<div class="groove">groove</div>
+<div class="ridge">ridge</div>
+<div class="inset">inset</div>
+<div class="outset">outset</div>
+
+<p> Dodatkowo można przypisać osobne style do każdego z boków.</p>
+<p class="mix">dotted solid double groove</p>
+
+<p class="thin">thin border</p>
+<p class="medium">medium border</p>
+<p class="thick">thick border</p>
+<p class="mixed">thin thick medium 10px</p>
+
+<p class="color">Możemy dodać każdy color dla każdej strony Obramowania, kolory dawane są według wskazówek zegara</p>
+<img src="color.jpg">
+<p>Dodatkowo możemy dodać stopień zaokrąglenia danego boku z apomocą border-radius</p>
+</body>
+</html>

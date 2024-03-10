@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name ="author" content="Łukasz">
+    <title>Document</title>
+    <style>
+        td, table {
+            border: 1px solid black 
+        }
+    </style>
+    <style>
+        .bold-text {
+            font-weight: bold; 
+        }
+    </style>
+    <style>
+        .red-text {
+            color: red ;
+        }
+    </style>
+    <style>
+        .italic-text {
+            font-style: italic;
+        }
+    </style>
+    <style>
+        #guwno {
+            color: goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <!-- Figure wraz z figcaption są używane aby dodać opis obrazka-->
+
+    <figure> 
+    <img src="picture.jpg"  width="500px" height="300px" alt="coś" title="obraz">
+    <figcaption>podpis obvrazka
+        -jebac
+    </figcaption>
+    </figure>
+    <img src="video.jpg" alt="" width="500px" height="300px">
+
+    <p> <a href="#formularze">Formularze</a></p>
+    <p> <a href="#formatowanie-tekstu">Formatowanie tekstu</a></p>
+    <p> <a href="#listy">listy</a></p>
+    <p> <a href="#tabele">tabele</a></p>
+    <p> <a href="#atrybuty">atrybuty</a></p>
+    <p> <a href="#klasy-atrybutów">klasy atrybutów</a></p>
+    <p> <a href="#hiperłącza">hiperłącza</a></p>
+    <p> <a href="#znaczniki-semantyczne">znaczniki semantyczne</a></p>
+    <p> <a href="#kontenery">kontenery</a></p>
+    <p> <a href="#multimedia">multimedia</a></p>
+    <p> <a href="#attribute selectors with value">attribute selectors with value</a></p>
+
+
+    Hejka co się z tobom dzieje 
+            <h4><p>Znaczenie tekstu</p></h4>
+        <p>paragraf</p>
+        <h3>tytuł artykułu</h1>
+            <h1><p>Formatowanie tekstu:</p></h1>
+        <p><u>Podkreślony tekst</u></p>
+        <p><i>Pochylony tekst</i></p>
+        <b>pogrubiony text</b>
+            <h1><p>Dodatkowe informacje do wyświetlania lub akcje do wykonania</p></h1>
+        <img src="karzel.jpg">  tag imp pokazuje obrazek
+        <p><a href="https://pl-pl.facebook.com/"> link do strony facebooka</a></p>
+            <h2>Zagnieżdzenie znaczników </h2>
+                <h5>Prawidłowe zagnieżdżenie, znacznik u rozpoczął się i zakończył wewnąrez p:</h5>
+                    <p> Lorem ipsum dolor sit, <u> consectetur</u> adispiscing.</p>
+                <h5>Błędne zagnieżdżenie, ponieważ tag u będący wewnątrz paragrafu powinien się w nim zakończyć, niestety skończył się za paragrafem</h5>
+                    <p>Lorem ipsum dolor sit <u>consecteetur adispiscing</p></u>
+        
+        <h3>Pojedyncze znaczniki tzw. "closing tags"</h3>
+            <p>Są to tagi beeez znacznika zamykającego, nie jest wymagane dla nich użycie slasha "/", przykłady:</p>
+            <hr> - horyzontalna linia na całą szerokość
+            <br> - nowa linia
+            <br><img src="karzel.jpg"> - wyświetlanie zdjęcia na stronie
+            <input type="text"> - kontrolka formularza
+
+            <br>Dodatkowo również: <link><meta>
+
+            W źródle strony internetowej można wyróżnić kilka podstawowych elementów:
+                <br>- Deklarację DOCTYPE
+                <br>- Sekcję head
+                <br>- Sekcję body
+                    
+            <h4>Doctype:</h4>  
+                <p>to deklaracja dla przeglądarki określająca wersję dokumentu html.</p>
+                <p>W praktyce opisuje standard w jakim napisana jest strona, przez co przeglądarka wie jak prawidłowo zinterpretować witryne wwww doctype nie jest tagiem</p> 
+                <p>Obecnie stoujemy doctype dla html5: "!doctype html"</p>
+                <p>Dawniej stosowano rozbudowane doctypy, ale dziś rzadko się je używa np dla wersji html 4.01: "!doctype html public ..."</p> 
+            <h4>Head:</h4>
+                <p>nagłówek dokumentu, czytany wyłącznie przez przeglądarkę. Zawiera tytuł strony, adresy do plików JabaScript czy arkuszy styłów oraz znaczniki meta</p>
+            <h4>Body:</h4>
+                <p>to główna treść tzw. ciało dokumentu prezentowane użytkownikowi</p>
+
+            <h2> Znaki specjalne w html tzw html entities</h2>
+                <p>Czasem zachodzi konieczność pokazania treści, która nie powinna być zintepretowana przez przeglądarkę jak np tag albo chceemy pokazać jakiś niestandardowy znak, którego nie mamy na klawiaturze. W takich sytuacjach pomagają nam znaki specjallne:</p>
+                <p>Parragraf zinterpretowany</p>
+                Tag &lt;p&gt; zapisany z znakami specjalnymi nie jest zinterpretowany
+                
+                <p>Znak specjalny copyright: &copy;</p>
+                <p>Zarejestrowany znak towarowy &reg;</p>
+                <p>Zwykły znak towarowy &trade;</p>
+                <p>Teelefon &phone;</p>
+                <p>Funt szterling &pound;</p>
+                <p>Połówka &frac12; oraz &#189;</p>
+                <!--lista znaków specjalnych: https://htmll.spec.whatwg.org/multipage/named-characters.html-->
+
+                <h3 id="formatowanie-tekstu">Formatowanie tekstu</h3>
+                    <pre>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+    Veritatis sit harum quia quam quos illum facilis aperiam dolores unde eius?</pre>
+
+                <!-- mark - wyróżnia element ze względu na kontekst -->
+
+                        <p>Lorem ipsum dolor sit amet <mark>consectetur</mark> adipisicing elit.</p>
+                
+                <!-- strong - pogrubiony tekst, semantycznie ważny, wyróżniony-->
+
+                        <strong>Kasia Kowalska</strong> - opiss tej osoby, Lorem ipsum dolor sit amet.
+
+                <!-- em - emfaza, pochylony, semantycznie znaczący mniejsza waga niż strong -->
+                        
+                        <p>Lorem ipsum <em>dolor</em> sit amet.</p>
+
+                <!-- abbr - skrót -->
+
+                        <abbr title="Hyper Text Markup Language">HTML</abbr>
+
+                <!-- zmiany w tekście -->
+                        
+                        <p>Lorem <s>ipsum</s> <sub>sub - indeks dolny</sub> sit amet <ins>Lorem, ipsum.</ins> <sup>sup - indeks górny</sup> <del>elit</del>. Culpa, ut.</p>
+                    
+                    <!-- <s> - skreśla po prostu, natomiast <del> usuwa i skreśla, <sup> - indeks górny -->
+
+
+
+                    <q cite="https://verdum.pl/cytaty-o-zyciu/">Życie jest jak jazda na rowerze. Żeby utrzymać równowagę, musisz być w ciągłym ruchu. </q>
+
+
+                    <blockquote> cite="https://verdum.pl/cytaty-o-zyciu/"><small>Życie jest jak jazda na rowerze.</small> Żeby utrzymać równowagę, musisz być w ciągłym ruchu. </blockquote>
+                        
+                    <!-- <blockout> służy jako wyidrębnienie tekstu np cytatu, <small> służy aby zmniejszyć czcionkę -->
+
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                        commodi dolore <span>nesciunt expedita et,</span> accusamus labore, reiciendis deleniti natus
+                         vero veniam impedit excepturi rerum optio <span>reprehenderit</span> sed nemo voluptatum corrupti.
+                    </p>
+                        <!-- <span> fragment tekstu którego określiliśmy w naszym kodzie html-->
+
+                    <p>
+                        Lorem <span class="bolded-text">ipsum dolor sit amet consectetur</span> adipisicing.
+                        Lorem <span class="bolded-text">ipsum dolor sit amet consectetur</span> adipisicing.
+                    </p>
+
+
+            <h3 id="listy">Listy:</h3>
+
+                <h5>Samochody</h5>
+                    <ul>
+                        <li>dodge</li>
+                        <li>chevrolet</li>
+                        <li>mazda</li>
+                        <li>nissan</li>
+                        <li>subaru</li>
+                    </ul>
+                
+                <h5>Owoce</h5>
+                    <ol start="5">
+                        <li>jagoda</li>
+                        <li>jabłko</li>
+                        <li>banan</li>
+                        <li>cytryna</li>
+                    </ol>
+
+                <h5>Owoce</h5>
+                    <ol type="A">
+                        <li>jagoda</li>
+                        <li>jabłko</li>
+                        <li>banan</li>
+                        <li>cytryna</li>
+                    </ol>
+
+                <h5>Owoce</h5>
+                    <ol type="a">
+                        <li>jagoda</li>
+                        <li>jabłko</li>
+                        <li>banan</li>
+                        <li>cytryna</li>
+                    </ol>
+
+                <h5>Owoce</h5>
+                    <ol type="I">
+                        <li>jagoda</li>
+                        <li>jabłko</li>
+                        <li>banan</li>
+                        <li>cytryna</li>
+                    </ol>
+
+                <h5>Owoce</h5>
+                    <ol type="i">
+                        <li>jagoda</li>
+                        <li>jabłko</li>
+                        <li>banan</li>
+                        <li>cytryna</li>
+                    </ol>   
+                    
+                    
+
+                <h5>Producenci:</h5>
+                    <ul>
+                        <li>
+                            dodge:
+                            <ol>
+                                <li>challanger</li>
+                                <li>demon</li>
+                                <li>hellcat</li>
+                            </ol>
+                        </li>
+                        <li>
+                            Merc
+                            <ul>
+                                <li>Clk </li>
+                                <li>wk </li>
+                                <li>sls </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+            
+
+                
+                    
+                    
+
+        <!-- <ul> - lista nieuporządkowana, <li> - "list item" podpunkty w listach
+             <ol> - "order list" lista uporządkowana
+            
+            jest kilka typów ol: A - z dużej litery
+                                 a - z małej litery
+                                 I - duże rzymskie
+                                 i - małe rzymkie
+            atrybut start umożliwia zaczynanie od wybranej przez nas pozycji w liscie uporządkowanej
+
+
+            Możemy zagnieżdżać listy tak jak w "Producenci" i tworzyć takie listy
+        -->
+
+
+
+        <h3 id="tabele">Tabelee</h3>
+
+            <table>
+                <tr>
+                    <td>wiersz 1 kolumna 1</td>
+                    <td>wiersz 1 kolumna 2</td>
+                    <td>wiersz 1 kolumna 3</td>
+                </tr>
+                <tr>
+                    <td>wiersz 2 kolumna 1</td>
+                    <td>wiersz 2 kolumna 2</td>
+                    <td>wiersz 2 kolumna 3</td>
+                </tr>
+
+            </table>
+
+
+        <br><table>
+            <caption> Podpis tabeli</caption>
+            <thead>
+                <tr>
+                    <td></td>
+                    <td>kolumna 1</td>
+                    <td>kolumna 2</td>
+                    <td>kolumna 3</td>
+
+                </tr>
+            </thead>
+            <tbody> 
+                <tr>
+                    <td>wiersz 1</td>
+                    <td>200</td>
+                    <td>300</td>
+                </tr>
+                <tr>
+                    <td>wiersz 2</td>
+                    <td>700</td>
+                    <td>600</td>
+                </tr>
+                <tr>
+                    <td>wiersz 3</td>
+                    <td>400</td>
+                    <td>500</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                <td>podsumowanie:</td>
+                <td>1300</td>
+                <td>1400</td>
+                <td>0</td>
+                </tr>
+            </tfoot>
+
+        </table>
+
+        <!-- <tr> - "table road" czyli wiersze 
+             <td> - poszczególne komórki     
+
+            !WAŻNE! aby dodać do każdej komórki obramowanie trzeba w seeksji head dodać styl css czyli:
+                    <style>
+                        td {
+                            border: 1px solid black (co ma być zmienione, rozmiar, typ lini, kolor lini)
+                        }
+                    </style>
+
+
+                !WAŻNE! w selektorze czyli tam gdzie td możemy dodawać kolejne selektory po przecinku np:
+                        td, table
+            
+                - solid zwykła prosta linia
+                - dotted wykropkowana linia
+
+            <caption> - podpis tabeli
+            <thead> - nagłówek tabeli 
+            <tbody> - właściwa treść tabeli
+            <tfoot> - stopka ( podsumowanie )
+        -->
+
+        <h3 id="atrybuty">Atrybuty</h3>
+
+            <ol reversed="reversed" start="10" type="1">
+                <li>dodge</li>
+                <li value="33">merc</li>
+                <li>bmw</li>
+            </ol>
+
+        <!-- !WAŻNE! <a href="https://google.com"> link </a> Atrybutem w tym poleceniu jessst HREF
+            natomiast link w "" jest wartością atrybutu
+ 
+             Atrybuty pozwalają na dodatkowe określenie wartości elementów html, to dodatkowa informacja dla
+             przeglądarki o elemencie. Atrybuty znajdująsie wyłącznie w tagu otwierającym
+            
+            !!!STRONA w3schools przedstawia atrybuty do tagów!!!
+            
+            typ revrsed wyświetla tabele od końca do początku ( chodzi o numerowanie )
+            
+            Możemy do <li> dodać value co zmieni wartość numeracji wybranej lini
+
+        -->
+
+
+        <input type="text" disabled value="hujku mały">
+        <input type="button" value="klikaj tutaj">
+        <input type='button' value="klikaj tutaj">
+
+        <!-- Atrybut wyłącza możliwość pisania w boxie    
+             Atrybut button umożliwia na stronie zrobienie przycisku 
+        -->
+
+        <img src="" alt="" data-gallery-name="wakacje">
+
+        <!-- aby stworzyć własny atrybut musisz dodać data aby nie było problemów -->
+
+
+        <h3 id="klasy-atrybutów">klasy atrybutów oraz id</h3>
+
+            <p class="bold-text">
+                Lorem ipsum dolor sit amet.
+            </p>
+
+            <p class="red-text italic-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing.
+            </p>
+
+
+            <p id="guwno">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, optio!</p>
+
+        <!--    jak chcemy tylko wybrany odcinek zmienić czcionke to używamy class czyli tworzymy specjalną
+            klase w paragrafie i pózniej zaznaczamy go w stylu css w sekcji head
+
+            identyfikator
+
+            id jeest unikalnym w całym dokumencie html,^# hash używa sie w stylach css aby odnaleźć id
+
+            klasy można używać wielokrotnie 
+        -->
+
+
+
+
+        <h3 id="hiperłącza">Hiperłącza</h3>
+            <p><a href="https://google.com">link bezwzględny - absolutny</a></p>
+
+           <p><a href="table test.html">link względny - relative</a></p>
+           <p><a href="./table test.html">link względny - relative z ./</a></p>
+
+
+           <p><a href="/table test.html">link względny - relative z /</a></p>
+           <!-- odwołuje się do głównego folderu-->
+
+           <!-- odwołanie się do folderu wyżej-->
+           <a href="../Screenshot_1.png "> odwołanie się do foldeeru wyżej</a>
+           <a href="../..Screenshot_1.png "> odwołanie się do folderu wyżej wyżej</a>
+
+            <p>Telefon kontaktowy: <a href="tel:48536102609">536102609</a></p>
+
+            <p>Mail kontaktowy: <a href="mailto:lukpuzio@gmail.com">lukpuzio@gmail.com</a></p>
+
+            <p> <a href="#">szansa na twoją reklamę</a></p> <!-- pusty link -->
+
+
+            
+            <p> <a href="#chapter2"> rozdział 2 </a></p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod corrupti nisi. Dolorem non at et iusto officiis ullam quisquam error placeat ad, consequatur deserunt, ipsum exercitationem. Dolorum expedita tenetur temporibus delectus esse voluptatibus, illum laboriosam pariatur! Ipsum mollitia explicabo nemo odio officia fuga voluptate perspiciatis corrupti dolore dolor saepe repellat aperiam, aliquid hic, sit voluptatem voluptatum veritatis aspernatur non? Explicabo voluptatum quasi veritatis sapiente possimus aperiam magni amet, commodi corrupti vitae ex aspernatur aut fugit molestiae provident officia qui voluptatem fuga omnis odit enim libero ad eius? Autem ipsa iusto debitis facere nulla dolores, iure ad libero necessitatibus hic.</p>
+
+            <h3 id="chapter1">Nagłówek - rozdział 1 </h3>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error labore neque architecto repudiandae. Unde numquam nemo dicta! Autem accusamus tenetur incidunt qui repellat, ad expedita. Magnam laborum libero nulla error aliquam dolorum fugit ea delectus fugiat? Accusamus libero ullam voluptas doloribus atque cum corrupti a dolorum! Iste ad ut error, iure quibusdam at debitis voluptatibus nihil provident incidunt molestiae veniam numquam asperiores soluta commodi mollitia similique explicabo atque aperiam vitae, qui perferendis sint! Ullam maiores, sapiente veritatis fuga ducimus nostrum asperiores facere, voluptates quas et dolore quasi vitae mollitia quia dolorem eligendi numquam quos iusto blanditiis architecto! Nobis, quo laborum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error labore neque architecto repudiandae. Unde numquam nemo dicta! Autem accusamus tenetur incidunt qui repellat, ad expedita. Magnam laborum libero nulla error aliquam dolorum fugit ea delectus fugiat? Accusamus libero ullam voluptas doloribus atque cum corrupti a dolorum! Iste ad ut error, iure quibusdam at debitis voluptatibus nihil provident incidunt molestiae veniam numquam asperiores soluta commodi mollitia similique explicabo atque aperiam vitae, qui perferendis sint! Ullam maiores, sapiente veritatis fuga ducimus nostrum asperiores facere, voluptates quas et dolore quasi vitae mollitia quia dolorem eligendi numquam quos iusto blanditiis architecto! Nobis, quo laborum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error labore neque architecto repudiandae. Unde numquam nemo dicta! Autem accusamus tenetur incidunt qui repellat, ad expedita. Magnam laborum libero nulla error aliquam dolorum fugit ea delectus fugiat? Accusamus libero ullam voluptas doloribus atque cum corrupti a dolorum! Iste ad ut error, iure quibusdam at debitis voluptatibus nihil provident incidunt molestiae veniam numquam asperiores soluta commodi mollitia similique explicabo atque aperiam vitae, qui perferendis sint! Ullam maiores, sapiente veritatis fuga ducimus nostrum asperiores facere, voluptates quas et dolore quasi vitae mollitia quia dolorem eligendi numquam quos iusto blanditiis architecto! Nobis, quo laborum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error labore neque architecto repudiandae. Unde numquam nemo dicta! Autem accusamus tenetur incidunt qui repellat, ad expedita. Magnam laborum libero nulla error aliquam dolorum fugit ea delectus fugiat? Accusamus libero ullam voluptas doloribus atque cum corrupti a dolorum! Iste ad ut error, iure quibusdam at debitis voluptatibus nihil provident incidunt molestiae veniam numquam asperiores soluta commodi mollitia similique explicabo atque aperiam vitae, qui perferendis sint! Ullam maiores, sapiente veritatis fuga ducimus nostrum asperiores facere, voluptates quas et dolore quasi vitae mollitia quia dolorem eligendi numquam quos iusto blanditiis architecto! Nobis, quo laborum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error labore neque architecto repudiandae. Unde numquam nemo dicta! Autem accusamus tenetur incidunt qui repellat, ad expedita. Magnam laborum libero nulla error aliquam dolorum fugit ea delectus fugiat? Accusamus libero ullam voluptas doloribus atque cum corrupti a dolorum! Iste ad ut error, iure quibusdam at debitis voluptatibus nihil provident incidunt molestiae veniam numquam asperiores soluta commodi mollitia similique explicabo atque aperiam vitae, qui perferendis sint! Ullam maiores, sapiente veritatis fuga ducimus nostrum asperiores facere, voluptates quas et dolore quasi vitae mollitia quia dolorem eligendi numquam quos iusto blanditiis architecto! Nobis, quo laborum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error labore neque architecto repudiandae. Unde numquam nemo dicta! Autem accusamus tenetur incidunt qui repellat, ad expedita. Magnam laborum libero nulla error aliquam dolorum fugit ea delectus fugiat? Accusamus libero ullam voluptas doloribus atque cum corrupti a dolorum! Iste ad ut error, iure quibusdam at debitis voluptatibus nihil provident incidunt molestiae veniam numquam asperiores soluta commodi mollitia similique explicabo atque aperiam vitae, qui perferendis sint! Ullam maiores, sapiente veritatis fuga ducimus nostrum asperiores facere, voluptates quas et dolore quasi vitae mollitia quia dolorem eligendi numquam quos iusto blanditiis architecto! Nobis, quo laborum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error labore neque architecto repudiandae. Unde numquam nemo dicta! Autem accusamus tenetur incidunt qui repellat, ad expedita. Magnam laborum libero nulla error aliquam dolorum fugit ea delectus fugiat? Accusamus libero ullam voluptas doloribus atque cum corrupti a dolorum! Iste ad ut error, iure quibusdam at debitis voluptatibus nihil provident incidunt molestiae veniam numquam asperiores soluta commodi mollitia similique explicabo atque aperiam vitae, qui perferendis sint! Ullam maiores, sapiente veritatis fuga ducimus nostrum asperiores facere, voluptates quas et dolore quasi vitae mollitia quia dolorem eligendi numquam quos iusto blanditiis architecto! Nobis, quo laborum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error labore neque architecto repudiandae. Unde numquam nemo dicta! Autem accusamus tenetur incidunt qui repellat, ad expedita. Magnam laborum libero nulla error aliquam dolorum fugit ea delectus fugiat? Accusamus libero ullam voluptas doloribus atque cum corrupti a dolorum! Iste ad ut error, iure quibusdam at debitis voluptatibus nihil provident incidunt molestiae veniam numquam asperiores soluta commodi mollitia similique explicabo atque aperiam vitae, qui perferendis sint! Ullam maiores, sapiente veritatis fuga ducimus nostrum asperiores facere, voluptates quas et dolore quasi vitae mollitia quia dolorem eligendi numquam quos iusto blanditiis architecto! Nobis, quo laborum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error labore neque architecto repudiandae. Unde numquam nemo dicta! Autem accusamus tenetur incidunt qui repellat, ad expedita. Magnam laborum libero nulla error aliquam dolorum fugit ea delectus fugiat? Accusamus libero ullam voluptas doloribus atque cum corrupti a dolorum! Iste ad ut error, iure quibusdam at debitis voluptatibus nihil provident incidunt molestiae veniam numquam asperiores soluta commodi mollitia similique explicabo atque aperiam vitae, qui perferendis sint! Ullam maiores, sapiente veritatis fuga ducimus nostrum asperiores facere, voluptates quas et dolore quasi vitae mollitia quia dolorem eligendi numquam quos iusto blanditiis architecto! Nobis, quo laborum.</p>
+
+            <h3 id="chapter2">Rozdział 2 </h3>
+
+        <h3 id="znaczniki-semantyczne">Znaczniki semantyczne budujące strone</h3>
+            <!-- znaczniki któee same sugerują co będzie w nazwie -->
+
+            <!-- footer - stopka (dodatkowe informacje) 
+                
+            -->
+
+                <header>
+                    <!-- nagłówek -->
+                    <nav>
+                        <!-- nawigacja -->
+                        <ul>
+                            <li> <a href="#">o nas</a></li>
+                            <li> <a href="#">kontakt</a></li>
+                        </ul>
+                    </nav>
+                </header>
+
+                <main>
+                    <!-- główną treść witrryny -->
+                        <article>
+                            <!-- artykuł - autonomiczna część strony 
+                            np post na blogu czy forum -->
+                        </article>
+                        <article>Lorem ipsum dolor sit amet.</article>
+                        <article>Lorem ipsum dolor sit amet.
+                            <section class="comments">
+                                    <!-- sekcja grupuje tematycznie treść o określonej znaczeniu -->
+                                    <article class="comment">Lorem, ipsum.</article>
+                                    <article class="comment">Lorem, ipsum.</article>
+                                    <article class="comment">Lorem, ipsum.</article>
+                                    <article class="comment">Lorem, ipsum.</article>
+                            </section>
+                        </article>
+                        <article>Lorem ipsum dolor sit amet.</article>
+                        <section class="lastet-news">
+                            <article class="news">
+                                Lorem, ipsum dolor.
+                                <a href="#">wiecej materiału znajdziesz tutaj</a>
+                            </article>
+                        </section>
+                </main>
+                <aside>
+                    <!-- boczne menu, treść mało powiązana z główną zawartością strony np reklamy opcje -->
+                    <ul>
+                        <li><a href="#">reklama 1</a></li>
+                        <li><a href="#">reklama 2</a></li>
+                        <li><a href="#">reklama 3</a></li>
+                    </ul>
+                </aside>
+
+                <footer>
+                    <!-- stopka strony -->
+                        &copy; example.com
+                </footer>
+
+                    <h3 id="kontenery">Kontenery - article section div</h3>
+
+                <article>
+                    <div>
+                        <!-- div nie ma znaczeenia seemantycznego słuzy wyłącznie do stylowania oraz grupowania elementów-->
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                        <!-- jak narazie mamy 3 kontenery div article oraz section -->
+                    </div>
+                </article>
+
+                    <h3 id="multimedia">Multimedia</h3>
+
+                        <img src="karzel.jpg" alt="co znajduje się na obrazku" title="karzel pijący codziennie">
+
+                        <img src="https://picum.photos/500/200" alt="">
+
+                        <!-- alt wykorzystywany jest dla przeglądarki żeeby wiedziała co jest na obrazku 
+                            title jest użyty jako opis dla programu dla osób niedowidzących, różnież jesst popup gdy user najedzie na obrazek
+                        -->
+
+                        <img src="https://picsum.photos/500/200" alt="cyfry przy obrazie oznaczją po kolei szerokość i wysokość">
+                        <img src="https://source.unsplash.com/random/300x150" alt="">
+                        <img src="https://source.unsplash.com/random/300x150/?car" alt=""> <!-- uzyskujemy losowy obrazek z danej kategori któerj napisaliśmy
+                        -->
+
+                        <!-- w ten sposón jak wyżej otrzymujemy losowy obrazek -->
+
+
+                        <figure>
+                            <img src="https://source.unsplash.com/random/300x150" alt="">
+                            <figcaption>opis lub podpis obrazka</figcaption>
+                        </figure>
+
+
+                        <audio controls loop src="https://cdn.pixabay.com/audio/2023/08/21/audio_802aa722fc.mp3">muzya</audio>
+
+                        <!-- tutaj mamy przykład muzyki oraz filmu na stronie -->
+
+                        
+                        <video  width="500" controls src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></video>
+
+                        
+                        <h3 id="formularze">formularze</h3>
+
+                        <form action="action.php" method="post" autocomplete="off">
+                                <p>
+                                    <label for="username">Wpisz imie:</label>
+                                    <input id="username" type="text" name="username" value="Nazwa użytkownika">
+                                </p>
+                                <p>
+                                    <label for="password">Wpisz hasło:</label>
+                                    <input id="password" type="password" name="password" placeholder="wpisz hasło">
+                                </p>
+                                <p>
+                                    <label for="country">Wpisz kraj:</label>
+                                    <input id="country" type="text" name="country" placeholder="wpisz kraj" minlength="3" maxlength="10">
+                                </p>
+                                <button type="submit">Zaloguj się</button>
+                                <button type="reset">Resetuj</button>
+                        </form>
+
+                        <!-- metoda post czyli dane z formularza mają być przesłane w nagłówkach (jest bezpieczniejsze)
+                            natomiast get:
+                                            https://example.com/action.php?username=kasia&password=admin1234
+
+
+                                name= - on działa aby strona mogłą poukładać formularze żeby nie powtarzały się, albo zeby były unikatowe
+
+                                value - czyli wartość która już będzie dodana
+                                placeholder - taka podpowiedź co użytkownik ma zrobić
+
+                                autocomplete off/on  - jeśli jest włączony podpowiada użytkownikowi jego poprzednie wpisy
+                                a jeśli jest off to już nie podpowiada
+
+                        -->
+
+                        <form action="test.php" method="post" autocomplete="off" enctype="multipart/form-data">
+                                <p>
+                                    Użytkownik: <input type="text" name="username">
+                                </p>
+                                <p> 
+                                    Email: <input type="email" name="email">
+                                </p>
+                                <p>
+                                    Number: <input type="number" name="number" min="10" max="200">
+                                </p>
+                                <p>
+                                    Niewidoczne pole <input type="hidden" name="data-id" value="12345">
+                                </p>
+                                <p>
+                                    <!-- wymagany specjalny atrybut enctype mulltipart/form-data możliwość wyboru 
+                                    pliku przez użytkownika i wysłania go na strone
+                                    application/x-www/form/urlencoded opis danych które domyślniee są wysyłane na 
+                                    serwer
+                                    -->
+                                    pole plików <input type="file" name="pictures"
+                                        accept="image/png, image/jpeg, image/jpg">
+                                </p>
+                                <button type="submit">Wyślij</button>
+
+
+                                <p>
+                                    <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                                </p>
+                                <p>
+                                    <input type="radio" name="color" value="red" id="red">
+                                    <label for="red">czerwony</label>
+                                    <input type="radio" name="color" value="blue" id="blue">
+                                    <label for="blue">niebieski</label>
+                                    <input type="radio" name="color" value="green" id="green">
+                                    <label for="green">zielony</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" name="hobby" id="sport">
+                                    <label for="sport">sport</label>
+                                    <input type="checkbox" name="hobby" id="cinema">
+                                    <label for="cinema">kino</label>
+                                    <input type="checkbox" name="hobby" id="cars">
+                                    <label for="sport">samochody</label>
+                                </p>
+                                <p>
+                                    <select name="color3" id="color3">
+                                        <option value="red"> czerwony </option>
+                                        <option value="green"> zielony </option>
+                                        <option value="blue"> niebieski </option>
+
+                                        <optgroup label="niestandardowe kolory">
+                                            <option value="purple">fioletowy</option>
+                                            <option value="black">czarny</option>
+                                            <option value="orange">pomaranczowy</option>
+                                        </optgroup>
+                                    </select>
+                                </p>
+                                <p>
+                                    <input type="color" name="color4" id="user-color">
+                                </p>
+                                <p>
+                                    <input type="date" name="date" id="user-date"><br>
+                                    <input type="datetime-local" name="datetime-local" id="lokal-date">
+                                </p>
+                                <p>
+                                    <fieldset>
+                                        <legend>legenda dla slider</legend>
+                                        <input type="range" name="slider" min="18" max="100" id="slider">
+                                    </fieldset>
+                                </p>
+                                <p>
+                                    <input type="tel" name="telefon" id="telefon">
+                                </p>
+                                <p>
+                                    Url:<input type="url" name="url" id="url" pattern="https://.*">
+                                </p>
+                                <button type="submit">Wyślij</button>
+
+                        </form>
+
+        <h3 id="attribute selectors with value">Attribute selectors with value</h3>
+            <style>
+                /*
+                [attribute *= "value"] - wybiera elementy jesli value gdziekolwiek jet  w atrybucie, wielkość
+                                         liter ma znaczenie
+                [attribute ~= "value"] - value jest gdziekolwik w atrybucie, ale w fragmentach oddzielonymi spacjami                         
+                */
+                [class *="foo"] {
+                    background: silver;
+                }
+
+                [class ~="foo"] {
+                        font-weight: bold;
+                }
+            </style>
+            
+            <div class="_FOo"> Lorem ipsum dolor sit amet.</div>
+            <p class="test foo test2">Lorem, ipsum dolor.</p>
+            <p class="_foooo test-345">Lorem, ipsum dolor.</p>
+            <p class="test-fo0">Lorem, ipsum dolor.</p>
+
+                <h3>Starts ends value</h3>
+
+            <style>
+                /*
+                [attribute ^="value"] - wybiera elementy jeśl value rozpoczyna atrybut
+
+                [attribute $="value"] - value kończy atrybut
+                */
+                [class ^="foo"] {
+                    background: yellow;
+                }
+                [class $="test"] {
+                    text-decoration: underline;
+                }
+            </style>
+
+            <div class="foooo123">Lorem ipsum dolor sit.</div>
+            <p class="test foo bar">Lorem, ipsum dolor.</p>
+            <p class="_foooo test8">Lorem, ipsum dolor.</p>
+            <p class="fo0 retest">Lorem, ipsum dolor.</p>
+
+            <h3>Selektor z pipe</h3>
+
+            <style>
+                /*
+                [attribute |="value"] - wybiera ellementy jeśli atrybut ma wartość value lub dodatkowo jest 
+                                        jeszcze po -
+                [attribute = "value" i] - wartość dokładnie jak value oraz ignoruje wielkość liter
+                */
+                [class |="PL"] {
+                    background:green;
+                }
+                [class ="pl" i ] {
+                    font-weight: bold;
+                }
+            </style>
+
+            <p class="PL">Lorem, ipsum dolor.</p>
+            <p class="PL-pL">Lorem, ipsum.</p>
+            <p class="PL too">Lorem, ipsum dolor.</p>
+            <p class="PL-test">Lorem, ipsum.</p>
+
+            <h3>Attribute selectors combined with other ones</h3>
+
+            <style>
+                div p.too[class *="ENG"] { background: silver; }
+            </style>
+                <div id="selector">
+                    <p class="ENG">Lorem, ipsum.</p>
+                    <p class="ENG-enG">Lorem, ipsum dolor.</p>
+                    <p class="ENG too">Lorem, ipsum dolor.</p>
+                    <p class="ENG-field">Lorem, ipsum.</p>
+                </div>
+        </body>
+</html>

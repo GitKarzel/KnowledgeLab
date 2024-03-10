@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="basicss.css">
+    <style>
+        p {
+            border: 2px solid white;
+            color: yellow;
+        }
+        div {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        h4 {
+            color: red;
+        } 
+        #user {
+            color: blue;
+        }
+        div, h4 {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p style="color: red;">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, numquam.
+    </p>
+
+    <!--
+        SKŁADNIA CSS - SELEKTOR
+        Selektor - reguła CSS rozpoczyna się selektorem, kótry wybiera konkreetne elementy html do ostylowania przez przeglądarkę
+        Wartość pisana po prawej stronie właściwości po dwukropku w postaci liczby czy tekstu itd.
+
+    
+    Selektor      Właściwość      Wartość
+        p       {   color:          red; }
+               |       Deklaracja        |
+               |__________________________|   
+                      Blok deklaracji
+
+    natomiast p {color: red;} nazywamy regułą css
+              Reguła - selektor oraz blok deklaracji
+              arkusz styłów - wiele reguł, zwykle w oddzielnym pliku css
+
+
+
+
+    -->
+
+    <p id="user">
+        Lorem ipsum dolor sit amet.
+    </p>
+    <div>Lorem ipsum dolor sit amet.</div>
+    <h4>Lorem, ipsum dolor.</h4>
+</body>Selektor
+</html>

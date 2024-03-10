@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.news {
+            width: 30%;
+            height: auto;
+            background: green;
+            border: 5px solid red;
+            margin: 10px;
+            padding: 10px;
+            float: left;
+        }
+
+        div.margin {
+            width: 100%;
+            height: auto;
+            padding: 20px;
+            margin: 30px;
+            border: 15px solid blue;
+        }
+        div.margin-top {
+            width: 100%;
+            height: auto;
+            padding: 20px;
+            margin-top: 20px;
+            margin-right: 10px;
+            margin-bottom: 15;
+            margin-left: 30px;
+            border: 5px solid red;
+        }
+        div.margin-dwie {
+            width: 100%;
+            height: auto;
+            padding:  20px;
+            margin: 30px 10px;
+        }
+        span {
+            font-weight: bold;
+        }
+        div.center {
+            width: 150px;
+            height: 100px;
+            background: red;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="news">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="news">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <!-- 
+        float: left; jest to atrybut który daje nam możliwość opływać element drugim elementem w lewo
+    -->
+
+
+    <h3>Margin</h3>
+
+    <p>Marginesy są używane do oddzielenia elementu html od innych części strony. Ważne aby nie mylić ich z padding czyli dopełnieniem
+        wewnątrz elementu
+    </p>
+
+    <p>Dopuszczalne dowolne jednostki: px, em, rem, etc.</p>
+
+
+<div class="margin">Content Lorem, ipsum.</div>
+
+
+<div class="margin-top">Content Lorem, ipsum.</div>
+<div class="margin-dwie">
+    <p>Możemy wskazać dokładnie z której strony ma być użyty margin </p>
+
+   <p> Dodatkowo mozemy użyć dwie wartości margin:</p>
+   <ul>
+        <li>Pierwsza z dwóch wartości odnosi się do <span>top</span> i <span>bottom</span>, a druga do <span>left</span> i <span>right</span></li>
+        <li>Margin - cztery wartości
+            <ul>
+                <li>W kolejności według wskazówek zeara: top, right, bottom, left</li>
+            </ul>
+        </li>
+
+   </ul>
+</div>
+
+<div class="center">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, modi.
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

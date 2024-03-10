@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .i {font-style: italic;}
+        .o {font-style: oblique;}
+        .n {font-style: normal;}
+
+        .small-caps {font-variant: small-caps;}
+
+        p.font1 {
+                font: italic bold 18px Arial;
+            }
+
+        p.font2 {
+            font: normal Helvetica;
+        }
+
+        p.font3 {
+            font: small-caps bold 16px/30px georgia, serif;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        Styl czcionki np kursywa (od designera), ukośna (pochylona o 8 stopni) lub normalna, wartość dziedziczona
+    -->
+
+    <p class="i">Tekst z kursywą</p>
+    <p class="o">tekst ukośny</p>
+    <p class="n">tekst domyślny</p>
+
+    <!-- 
+        Tekst pisany kapitalikami, czyli dużymi literami, ale wielkości małych liter, wartość dziedziczona
+    -->
+    <p>Tekst z normalną czcionką
+        <span class="small-caps">Kapitalikami</span>
+    </p>
+
+    <!--
+        Wszystkie wartości czcionki można zapisać w jednej właściwości font:
+            font: font-style font-variant font-weight font-size/lne-height font-family
+            Obowiązkowe tylko wartości font-style i font-family
+    -->
+
+    <p class="font1">.font1 italic bold arial</p>
+    <p class="font2">.font2 normal short font</p>
+    <p class="font3">.font3 small-caps bold 16px, line height</p>
+</body>
+</html>

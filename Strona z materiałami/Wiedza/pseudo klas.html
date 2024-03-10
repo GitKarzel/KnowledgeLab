@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a { font-weight: bold; color: aqua;}
+        body {background: purple;}
+
+        a:hover {color: red;}
+        a:active {color: orange;}
+        a:visited {color: black;}
+    </style>
+    <style>
+        input:checked {outline: 2px solid red; }
+        input:disabled {outline: 2px solid black; }
+        input:focus {outline: 2px solid orange;}
+    </style>
+    <style>
+        ul li:first-child {text-decoration: underline ;}
+        ul li:last-child  {color: green; }
+        ul li:nth-child(4) {color: red; }
+        ul li:nth-child(3n) {color: silver;}
+        ul li:nth-child(even) {background: darkgrey;}
+        ul li:nth-child(odd) {background: darkred;}
+        
+    </style>
+</head>
+<body>
+    
+    <!-- Pseudoklasy wybierają elementy ze względu na stan w jakim się znajduje:
+    :hover - gdy kursor nad elementem
+    :active -  klikamy element
+    :visited - gdy link był już odwiedzony-->
+
+
+    <ul>
+        <li><a href="https://google.com">google</a></li>
+        <li><a href="https://youttube.com">yt</a></li>
+        <li><a href="https://onet.pl">onet</a></li>
+        <li>zgaszone wszystkie palniki</li>
+    </ul>
+
+
+
+    <!--
+        Pseudoklasy wybierają element ze względu na stan w jakim się znajduje:
+        :checked - zaznaczony element
+        :disabled - nieaktywny
+        :focus - element posiada focus
+    -->
+    <form>
+        <input type="checkbox" name="city" id="wawa">
+        <label for="wawa">Warszawa</label>
+        <input type="checkbox" disabled-name="city" id="krk">
+        <label for="krk">Kraków</label>
+        <input type="checkbox" name="city" id="gd">
+        <label for="gd">Gdańsk</label>
+    </form>
+
+    <!--
+        pseudoklasy wybierają element ze względu na stan w jakim się znajduje 
+        :first-child - pierwszy element z grupy elementów
+        :last-child - ostatni element z grupy
+        :nth-child(nr) - kolejny element
+    -->
+    <ul>
+        <ul>
+            <li>Lorem, ipsum. 1</li>
+            <li>Lorem, ipsum. 2</li>
+            <li>Lorem, ipsum. 3</li>
+            <li>Lorem, ipsum. 4</li>
+            <li>Lorem, ipsum. 5</li>
+            <li>Lorem, ipsum. 6</li>
+            <li>Lorem, ipsum. 7</li>
+        </ul>
+    </ul>
+
+    <!-- 
+        Pseudoklasa ;not wybierze elementy nie spełniające warunków selektora:
+    -->
+    <style>
+        input:not(.foo):not(.bar) {font-weight: bold;}
+
+        input:not([type = "email"]) { background: green;}
+    </style>
+<input type="text" class="foo" value="lorem ipsum">
+<input type="text" class="bar" value="lorem ipsum">
+<input type="email" value="lorem@ipsum@gmail.com">
+
+
+
+
+</body>
+</html>
